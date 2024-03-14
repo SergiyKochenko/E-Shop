@@ -1,3 +1,8 @@
+
+from decimal import Decimal
+
+from store.models import Product
+
 class Cart():
 
     def __init__(self, request):
@@ -11,4 +16,26 @@ class Cart():
             cart = self.session['session_key'] = {}
 
 
-            self.cart = cart
+        self.cart = cart
+
+
+    def add(self, product, product_qty):
+
+        product_id = str(product.id)
+
+
+        if product_id in self.cart:
+
+            self.cart[product_id]['qty'] = product_qty
+
+        else:
+
+            self.cart[product_id] = {'price': str(product.price), 'qty': product_qty}
+
+
+        self.session.modified = True
+
+
+    def __len__(self):
+
+        return sum(item['qty'] for item in self.cart.values())

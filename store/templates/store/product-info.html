@@ -99,6 +99,8 @@
 
 <script>
 
+    // Add button
+
     $(document).on('click', '#add-button', function(e){
 
         e.preventDefault();
@@ -114,10 +116,13 @@
                 csrfmiddlewaretoken: "{{csrf_token}}",
                 action: 'post'
 
-
             },
 
             success: function(json){
+
+               // console.log(json)
+
+                document.getElementById("cart-qty").textContent = json.qty
 
 
             },
@@ -129,7 +134,11 @@
 
         });
 
+
     })
+
+
+
 
 </script>
 
