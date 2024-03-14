@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'store', # Django app
+
     'cart', # Django app
+
+    'account', # Django app
 
     'mathfilters',
 ]
