@@ -15,7 +15,7 @@ def register(request):
 
             user = form.save()
 
-            return redirect('')
+            return redirect('store')
 
 
 
