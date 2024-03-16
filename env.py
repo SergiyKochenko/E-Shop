@@ -1,5 +1,5 @@
 import os
 
-os.environ['EMAIL_HOST_PASS'] = '--------------'
+os.environ['EMAIL_HOST_PASS'] = 'dgfhky5trefdsd'
 
 
