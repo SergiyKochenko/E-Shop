@@ -11,3 +11,5 @@ cloudinary_python.txt
 *.pyc
 __pycache__
 README.md
+
+config/env.py
