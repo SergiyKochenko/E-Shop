@@ -1,7 +1,7 @@
 
 from django.shortcuts import redirect, render
 
-from .forms import CreateUserForm, LoginForm
+from .forms import CreateUserForm, LoginForm, UpdateUserForm
 
 from django.contrib.auth.models import User
 
@@ -145,7 +145,20 @@ def dashboard(request):
 @login_required(login_url='my-login')
 def profile_management(request):
 
-    return render(request, 'account/profile-management.html')
+    if request.method == 'POST':
+
+        user_form = UpdateUserForm(request.POST, instance=request.user)
+
+        user_form.save()
+
+        return redirect('dashboard')
+    
+    user_form = UpdateUserForm(instance=request.user)
+
+    context = {'user_form':user_form}
+
+
+    return render(request, 'account/profile-management.html', context=context)
 
 
 @login_required(login_url='my-login')
