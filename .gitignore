@@ -6,10 +6,7 @@ __pycache__/
 *.py[cod]
 node_modules/
 .github/
-cloudinary_python.txt
 *.sqlite3
 *.pyc
 __pycache__
-README.md
-
 config/env.py
