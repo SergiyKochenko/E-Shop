@@ -17,49 +17,54 @@
 
     </style>
 
-
-<body>
-
-    <br>
-
-    <div class="container bg-white shadow-md p-5 form-layout">
-
-        <h3> Create your account </h3>
-
-        <h5> Purchase your favorite items today! </h5>
+    <body>
 
         <br>
-        <br>
 
-        <form method="POST" autocomplete="off">
+        <div class="container bg-white shadow-md p-5 form-layout">
 
-            {% csrf_token %}
+            <h3> Create your account </h3>
 
-            {{form.username | as_crispy_field}}
+            <h5> Purchase your favourite items today! </h5>
 
-            <br> <br>
-
-            {{form.email | as_crispy_field}}
-
-            <br> <br>
-
-            {{form.password1 | as_crispy_field}}
-
+            <hr>
             <br>
 
-            {{form.password2 | as_crispy_field}}
+            <form method="POST" autocomplete="off">
 
-            <br> <br>
+                {% csrf_token %}
 
-            <button type="submit" class="btn btn-secondary btn-lg w-100 btn-block p-2"> &nbsp; Create account </button>
-            
-        </form>
+                {{form.username|as_crispy_field}}
 
+                <br> <br>
 
-    </div>
+                {{form.email|as_crispy_field}}
 
+                <br> <br>
 
-</body>
+                {{form.password1|as_crispy_field}}
+
+                <br> <br>
+
+                {{form.password2|as_crispy_field}}
+
+                <br> <br>
+                
+                <button type="submit" class="btn btn-primary navbar-btn text-white w-100 p-2"> &nbsp; Create account </button>
+
+                <br> <br>
+
+                <div class="text-center">
+
+                    <a href="{% url 'my-login' %}"> Already have an account? </a>
+
+                </div>
+
+            </form>
+
+        </div>
+        
+    </body>
 
 <br>
 <br>

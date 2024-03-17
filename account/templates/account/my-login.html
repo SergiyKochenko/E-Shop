@@ -1,17 +1,14 @@
-
 {% include "store/base.html" %}
 
 {% load static %}
 
 {% load crispy_forms_tags %}
 
-
 {% block content %}
 
     <style>
 
         body{
-
 
             background-color: blue;
 
@@ -37,9 +34,7 @@
 
                 {{form.username|as_crispy_field}}
 
-
                 <br> 
-
 
                 {{form.password|as_crispy_field}}
 
@@ -53,7 +48,7 @@
 
                 <div class="text-center">
 
-                    <a href="/"> Don't have an account? </a>
+                    <a href="{% url 'register' %}"> Don't have an account? </a>
 
 
                     <br> <br>
@@ -69,7 +64,6 @@
     </body>
 
     <br> <br>
-
 
 {% endblock %}
 
