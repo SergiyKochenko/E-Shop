@@ -1,17 +1,14 @@
-
 {% include "store/base.html" %}
 
 {% load static %}
 
 {% load crispy_forms_tags %}
 
-
 {% block content %}
 
     <style>
 
         body{
-
 
             background-color: blue;
 
@@ -25,7 +22,21 @@
 
         <div class="container bg-white shadow-md p-5 form-layout">
 
-            <h3> Update your account </h3>
+            <h3> <i class="fa fa-address-book" aria-hidden="true"></i> &nbsp; Profile management </h3>
+
+            <p> Manage your account effectively. </p>
+
+            <hr>
+            
+        </div>
+
+        <br>
+
+        <div class="container bg-white shadow-md p-5 form-layout">
+
+            <h4> Update your account </h4>
+
+            <p> Feel free to make changes to your account. </p>
 
             <hr>
 
@@ -37,18 +48,13 @@
 
                 {{user_form.username|as_crispy_field}}
 
-
-                <br> 
-
+                <br> <br>
 
                 {{user_form.email|as_crispy_field}}
 
-                <br> 
+                <br> <br>
 
-                <button type="submit" class="btn btn-primary navbar-btn text-white w-100 p-2"> <i aria-hidden="true"></i> &nbsp; Update your account </button>
-
-                <br>
-
+                <button type="submit" class="btn btn-primary navbar-btn text-white"> &nbsp; Update your account </button>
 
             </form>
 
@@ -58,12 +64,11 @@
 
         <div class="container bg-white shadow-md p-5 form-layout">
 
-            <h3> Delete your account </h3>
+            <h4> Delete your account </h4>
 
-            <br>
+            <p> Proceed if you wish to delete your account.</p>
 
-            <p> Proceed it you wish to delet your account. </p>
-
+            <hr>
 
             <a class="btn btn-primary navbar-btn text-white" type="button"  href="{% url 'delete-account' %}"> Delete your account </a>
 
@@ -72,7 +77,6 @@
     </body>
 
     <br> <br>
-
 
 {% endblock %}
 
