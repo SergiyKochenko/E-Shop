@@ -22,6 +22,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 
+
 def register(request):
 
     form = CreateUserForm()
@@ -55,11 +56,7 @@ def register(request):
 
             return redirect('email-verification-sent')
 
-
-
     context = {'form':form}
-
-    
 
     return render(request, 'account/registration/register.html', context=context)
 
@@ -84,9 +81,11 @@ def email_verification(request, uidb64, token):
         return redirect('email-verification-failed')
 
 
+
 def email_verification_sent(request):
 
     return render(request, 'account/registration/email-verification-sent.html')
+
 
 
 def email_verification_success(request):
@@ -128,11 +127,13 @@ def my_login(request):
     return render(request, 'account/my-login.html', context=context)
 
 
+
 def user_logout(request):
 
     auth.logout(request)
 
     return redirect("store")
+
 
 
 @login_required(login_url='my-login')
@@ -142,23 +143,26 @@ def dashboard(request):
     return render(request, 'account/dashboard.html')
 
 
+
 @login_required(login_url='my-login')
-def profile_management(request):
+def profile_management(request):    
+
+    user_form = UpdateUserForm(instance=request.user)
 
     if request.method == 'POST':
 
         user_form = UpdateUserForm(request.POST, instance=request.user)
 
-        user_form.save()
+        if user_form.is_valid():
 
-        return redirect('dashboard')
-    
-    user_form = UpdateUserForm(instance=request.user)
+            user_form.save()
+
+            return redirect('dashboard')
 
     context = {'user_form':user_form}
 
-
     return render(request, 'account/profile-management.html', context=context)
+
 
 
 @login_required(login_url='my-login')
@@ -173,5 +177,3 @@ def delete_account(request):
         return redirect('store')
 
     return render(request, 'account/delete-account.html')
-
-
