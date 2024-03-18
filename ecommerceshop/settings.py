@@ -61,6 +61,8 @@ INSTALLED_APPS = [
 
     'account', # Django app
 
+    'payment', # Djang app
+
     'mathfilters',
 
     'crispy_forms', 
