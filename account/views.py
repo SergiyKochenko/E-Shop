@@ -3,6 +3,10 @@ from django.shortcuts import redirect, render
 
 from .forms import CreateUserForm, LoginForm, UpdateUserForm
 
+from payment.forms import ShippingForm
+
+from payment.models import ShippingAddress
+
 from django.contrib.auth.models import User
 
 from django.contrib.sites.shortcuts import get_current_site
@@ -17,7 +21,7 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 
 from django.contrib.auth.models import auth
 
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate
 
 from django.contrib.auth.decorators import login_required
 
@@ -199,3 +203,42 @@ def delete_account(request):
         return redirect('store')
 
     return render(request, 'account/delete-account.html')
+
+
+
+@login_required(login_url='my-login')
+def manage_shipping(request):
+
+    try:
+
+        shipping = ShippingAddress.objects.get(user=request.user.id)
+
+    except ShippingAddress.DoesNotExist:
+
+        shipping = None
+
+    form = ShippingForm(instance=shipping)
+
+    if request.method == 'POST':
+
+        form = ShippingForm(request.POST, instance=shipping)
+
+        if form.is_valid():
+
+            # user FK on the object
+
+            shipping_user = form.save(commit=False)
+
+            # FK itself
+
+            shipping_user.user = request.user
+
+
+            shipping_user.save()
+
+            return redirect('dashboard')
+
+
+    context = {'form':form}
+
+    return render(request, 'account/manage-shipping.html', context=context)
