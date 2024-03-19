@@ -26,6 +26,32 @@ def checkout(request):
 
 
 
+
+
+
+
+
+
+
+
+
+
+def complete_order(request):
+
+  pass
+
+
+
+
+
+
+
+
+
+
+
+
+
 def payment_success(request):
 
     # Clear shopping cart
