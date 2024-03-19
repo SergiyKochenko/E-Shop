@@ -114,6 +114,10 @@
 
     <script>
 
+        // Total price
+
+        var total_price = '{{cart.get_total}}';
+
         // PayPal JS SDK
 
         const paypalButtonsComponent = paypal.Buttons({
@@ -188,7 +192,48 @@
     
                 });
     
+                 // Complete order - WITH SHIPPING
+    
+                 //  The required fields are filled out
                 
+                 var order_verified = 'Yes';
+    
+                 function checkInputs(){
+    
+                     $(':input[required]').each(function(){
+    
+                         if($(this).val() == ''){
+    
+                             // The required fields are empty
+    
+                            return order_verified = 'No';
+    
+                        }
+    
+                    });
+    
+                    return order_verified;
+    
+                 }
+                 
+                 var isOrderVerified = checkInputs()
+    
+                 if(isOrderVerified === 'Yes')
+                 {
+    
+                    actions.enable();
+    
+                 }
+    
+                 else
+                 {
+    
+                    actions.disable();
+    
+                 }
+    
+            },
+    
 
 
 
@@ -216,7 +261,7 @@
                     purchase_units: [
                         {
                             amount: {
-                                value: "88.44"
+                                value: total_price
                             }
                         }
                     ]
