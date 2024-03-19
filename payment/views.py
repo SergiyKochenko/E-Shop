@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from . models import ShippingAddress
+
 
 
 def checkout(request):
