@@ -129,14 +129,6 @@
                 layout: "vertical",
               },
 
-
-
-
-
-
-
-
-
               onInit: function(data, actions) {
 
                 actions.disable();
@@ -170,7 +162,6 @@
 
                         }
     
-                        
                         var isOrderVerified = checkInputs()
     
 
@@ -234,25 +225,6 @@
     
             },
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
             // set up the transaction
             createOrder: (data, actions) => {
                 // pass in any options from the v2 orders create call:
@@ -270,32 +242,6 @@
                 return actions.order.create(createOrderPayload);
             },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
             // finalize the transaction
             onApprove: (data, actions) => {
                 const captureOrderHandler = (details) => {
@@ -307,38 +253,10 @@
     
                 return actions.order.capture().then(captureOrderHandler);
             },
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             // handle unrecoverable errors
             onError: (err) => {
                 console.error('An error prevented the buyer from checking out with PayPal');
-    
-      
     
             }
         });
@@ -349,7 +267,7 @@
                 console.error('PayPal Buttons failed to render');
             });
 
-
+<!-- ============================================== -->
 
         // Complete checkout
         
