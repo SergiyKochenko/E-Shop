@@ -102,17 +102,6 @@ def complete_order(request):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 def payment_success(request):
 
     # Clear shopping cart
