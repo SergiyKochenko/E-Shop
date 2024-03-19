@@ -124,6 +124,89 @@
                 shape: "pill",
                 layout: "vertical",
               },
+
+
+
+
+
+
+
+
+
+              onInit: function(data, actions) {
+
+                actions.disable();
+    
+    
+                // Complete order - NO SHIPPING
+                
+                document.querySelectorAll('.validate').forEach(item => {
+                    item.addEventListener('keyup', event => {
+    
+                        //  The required fields are filled out
+    
+                        var order_verified = 'Yes';
+    
+                        function checkInputs(){
+    
+                            $(':input[required]').each(function(){
+    
+                                if($(this).val() == ''){
+    
+    
+                                    // The required fields are empty
+    
+                                    return order_verified = 'No';
+    
+                                }
+    
+                            });
+    
+                            return order_verified;
+
+                        }
+    
+                        
+                        var isOrderVerified = checkInputs()
+    
+
+                        if(isOrderVerified === 'Yes')
+                        {
+    
+                            actions.enable();
+    
+                        }
+    
+                        else
+                        {
+    
+                            actions.disable();
+
+                        }
+    
+                    });
+    
+                });
+    
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
             // set up the transaction
             createOrder: (data, actions) => {
@@ -141,6 +224,32 @@
     
                 return actions.order.create(createOrderPayload);
             },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
             // finalize the transaction
             onApprove: (data, actions) => {
@@ -154,6 +263,32 @@
                 return actions.order.capture().then(captureOrderHandler);
             },
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // handle unrecoverable errors
             onError: (err) => {
                 console.error('An error prevented the buyer from checking out with PayPal');
