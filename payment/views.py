@@ -86,11 +86,11 @@ def complete_order(request):
 
             # Email order
                 
-            send_mail('Order received', 'Hi! ' + '\n\n' + 'Thank you for placing your order' + '\n\n' +
+            # send_mail('Order received', 'Hi! ' + '\n\n' + 'Thank you for placing your order' + '\n\n' +
                       
-                      'Please see your order below:' + '\n\n' + str(all_products) + '\n\n' + 'Total paid: $' +
+            #           'Please see your order below:' + '\n\n' + str(all_products) + '\n\n' + 'Total paid: $' +
 
-                      str(cart.get_total()), settings.EMAIL_HOST_USER, [email], fail_silently=False,)
+            #           str(cart.get_total()), settings.EMAIL_HOST_USER, [email], fail_silently=False,)
             
 
 
@@ -112,17 +112,17 @@ def complete_order(request):
 
 
 
-                product_list.append(item['product'])
+            #     product_list.append(item['product'])
 
-            all_products = product_list
+            # all_products = product_list
 
             # Email order
                 
-            send_mail('Order received', 'Hi! ' + '\n\n' + 'Thank you for placing your order' + '\n\n' +
+            # send_mail('Order received', 'Hi! ' + '\n\n' + 'Thank you for placing your order' + '\n\n' +
                       
-                      'Please see your order below:' + '\n\n' + str(all_products) + '\n\n' + 'Total paid: $' +
+            #           'Please see your order below:' + '\n\n' + str(all_products) + '\n\n' + 'Total paid: $' +
 
-                      str(cart.get_total()), settings.EMAIL_HOST_USER, [email], fail_silently=False,)
+            #           str(cart.get_total()), settings.EMAIL_HOST_USER, [email], fail_silently=False,)
 
 
 

@@ -1,4 +1,3 @@
-
 from django.shortcuts import redirect, render
 
 from .forms import CreateUserForm, LoginForm, UpdateUserForm
@@ -6,6 +5,8 @@ from .forms import CreateUserForm, LoginForm, UpdateUserForm
 from payment.forms import ShippingForm
 
 from payment.models import ShippingAddress
+
+from payment.models import Order, OrderItem
 
 from django.contrib.auth.models import User
 
@@ -37,13 +38,15 @@ def register(request):
 
         form = CreateUserForm(request.POST)
 
-        if form.is_valid():
+        if form.is_valid(): 
 
             user = form.save()
 
             user.is_active = False
 
             user.save()
+
+            # Email verification setup (template)
 
             current_site = get_current_site(request)
 
@@ -60,19 +63,28 @@ def register(request):
 
             user.email_user(subject=subject, message=message)
 
+
             return redirect('email-verification-sent')
 
+
+
     context = {'form':form}
+
 
     return render(request, 'account/registration/register.html', context=context)
 
 
 
+
 def email_verification(request, uidb64, token):
+
+    # uniqueid
 
     unique_id = force_str(urlsafe_base64_decode(uidb64))
 
     user = User.objects.get(pk=unique_id)
+    
+    # Success
 
     if user and user_tokenizer_generate.check_token(user, token):
 
@@ -81,6 +93,9 @@ def email_verification(request, uidb64, token):
         user.save()
 
         return redirect('email-verification-success')
+
+
+    # Failed 
 
     else:
 
@@ -91,7 +106,6 @@ def email_verification(request, uidb64, token):
 def email_verification_sent(request):
 
     return render(request, 'account/registration/email-verification-sent.html')
-
 
 
 def email_verification_success(request):
@@ -133,6 +147,7 @@ def my_login(request):
     return render(request, 'account/my-login.html', context=context)
 
 
+# logout
 
 def user_logout(request):
 
@@ -148,13 +163,16 @@ def user_logout(request):
 
                 del request.session[key]
 
+
     except KeyError:
 
         pass
 
+
     messages.success(request, "Logout success")
 
     return redirect("store")
+
 
 
 
@@ -166,8 +184,11 @@ def dashboard(request):
 
 
 
+
 @login_required(login_url='my-login')
 def profile_management(request):    
+
+    # Updating our user's username and email
 
     user_form = UpdateUserForm(instance=request.user)
 
@@ -179,13 +200,16 @@ def profile_management(request):
 
             user_form.save()
 
-            messages.info(request, "Account updated")
+            messages.info(request, "Update success!")
 
             return redirect('dashboard')
+
+   
 
     context = {'user_form':user_form}
 
     return render(request, 'account/profile-management.html', context=context)
+
 
 
 
@@ -198,26 +222,36 @@ def delete_account(request):
 
         user.delete()
 
+
         messages.error(request, "Account deleted")
 
+
         return redirect('store')
+
 
     return render(request, 'account/delete-account.html')
 
 
-
+# Shipping view
 @login_required(login_url='my-login')
 def manage_shipping(request):
 
     try:
 
+        # Account user with shipment information
+
         shipping = ShippingAddress.objects.get(user=request.user.id)
+
 
     except ShippingAddress.DoesNotExist:
 
+        # Account user with no shipment information
+
         shipping = None
 
+
     form = ShippingForm(instance=shipping)
+
 
     if request.method == 'POST':
 
@@ -225,16 +259,17 @@ def manage_shipping(request):
 
         if form.is_valid():
 
-            # user FK on the object
+            # Assign the user FK on the object
 
             shipping_user = form.save(commit=False)
 
-            # FK itself
+            # Adding the FK itself
 
             shipping_user.user = request.user
 
-
             shipping_user.save()
+
+            messages.info(request, "Update success!")
 
             return redirect('dashboard')
 
@@ -242,3 +277,19 @@ def manage_shipping(request):
     context = {'form':form}
 
     return render(request, 'account/manage-shipping.html', context=context)
+
+
+@login_required(login_url='my-login')
+def track_orders(request):
+
+    try:
+
+        orders = OrderItem.objects.filter(user=request.user)
+
+        context = {'orders':orders}
+
+        return render(request, 'account/track-orders.html', context=context)
+
+    except:
+
+        return render(request, 'account/track-orders.html')
