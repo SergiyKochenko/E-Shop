@@ -65,7 +65,9 @@ INSTALLED_APPS = [
 
     'mathfilters',
 
-    'crispy_forms', 
+    'crispy_forms',
+
+    'storages',
 ]
 
 
@@ -177,3 +179,50 @@ EMAIL_USE_TLS = 'True'
 
 EMAIL_HOST_USER = 'sergiykochenko@gmail.com'
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASS')
+
+# AWS credentials:
+
+AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID') # Access Key ID 
+AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY') # Secret Access Key ID
+
+# S3 configuration settings:
+
+AWS_STORAGE_BUCKET_NAME = 'e-shop-1' 
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+AWS_S3_FILE_OVERWRITE = False
+
+
+# Admin styling adjustment
+
+ADMIN_MEDIA_PREFIX = '/static/admin/'
+
+
+# RDS (Database) configuration settings:
+
+'''
+DATABASES = {
+
+    'default': {
+
+        'ENGINE': 'django.db.backends.postgresql',
+
+        'NAME': '',
+
+        'USER': '',
+
+        'PASSWORD': '',
+
+        'HOST': '',
+
+        'PORT': '5432',
+
+
+    }
+
+}
+'''
