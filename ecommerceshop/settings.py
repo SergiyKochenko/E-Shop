@@ -114,6 +114,8 @@ WSGI_APPLICATION = 'ecommerceshop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -121,6 +123,7 @@ DATABASES = {
     }
 }
 
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -204,20 +207,20 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # RDS (Database) configuration settings:
 
-'''
+
 DATABASES = {
 
     'default': {
 
         'ENGINE': 'django.db.backends.postgresql',
 
-        'NAME': '',
+        'NAME': 'data_e_shop_1',
 
-        'USER': '',
+        'USER': 'sergiy',
 
-        'PASSWORD': '',
+        'PASSWORD': env('DB_PASSWORD'),  # Get the password from the environment variable
 
-        'HOST': '',
+        'HOST': 'database-1.cbiok6skg6x5.eu-west-1.rds.amazonaws.com',
 
         'PORT': '5432',
 
@@ -225,4 +228,4 @@ DATABASES = {
     }
 
 }
-'''
+
