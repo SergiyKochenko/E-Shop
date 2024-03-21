@@ -40,9 +40,11 @@ environ.Env.read_env()
 SECRET_KEY = 'django-insecure-j^e8lr-#irgc*x_1zd1z$f-r_+uw6lqt)^z%b==7-po@oe3#b2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+# CSRF_TRUSTED_ORIGINS = ['']
 
 
 # Application definition
