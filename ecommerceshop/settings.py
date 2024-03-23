@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import environ
+
 import os
 
 import environ
@@ -18,7 +20,6 @@ from pathlib import Path
 
 if os.path.exists("env.py"):
     import env
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,15 +30,12 @@ env = environ.Env()
 environ.Env.read_env()
 
 
-
-
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-j^e8lr-#irgc*x_1zd1z$f-r_+uw6lqt)^z%b==7-po@oe3#b2'
+SECRET_KEY = env('SECRET_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -116,7 +114,7 @@ WSGI_APPLICATION = 'ecommerceshop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-'''
+"""
 
 DATABASES = {
     'default': {
@@ -125,7 +123,7 @@ DATABASES = {
     }
 }
 
-'''
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -165,7 +163,6 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
-
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = BASE_DIR / 'static/media'
@@ -182,8 +179,8 @@ EMAIL_PORT = '587'
 EMAIL_USE_TLS = 'True'
 
 
-EMAIL_HOST_USER = 'sergiykochenko@gmail.com'
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASS')
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 
 # AWS credentials:
 
@@ -192,7 +189,7 @@ AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY') # Secret Access Key ID
 
 # S3 configuration settings:
 
-AWS_STORAGE_BUCKET_NAME = 'e-shop-1' 
+AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
@@ -209,25 +206,20 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # RDS (Database) configuration settings:
 
-
 DATABASES = {
 
     'default': {
 
         'ENGINE': 'django.db.backends.postgresql',
 
-        'NAME': 'data_e_shop_1',
+        'NAME': env('DB_NAME'),
 
-        'USER': 'sergiy',
+        'USER': env('DB_USER'),
 
-        'PASSWORD': env('DB_PASSWORD'),  # Get the password from the environment variable
+        'PASSWORD': env('DB_PASSWORD'),
 
-        'HOST': 'database-1.cbiok6skg6x5.eu-west-1.rds.amazonaws.com',
+        'HOST': env('DB_HOST'),
 
         'PORT': '5432',
-
-
     }
-
 }
-
