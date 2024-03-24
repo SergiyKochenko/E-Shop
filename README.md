@@ -244,6 +244,22 @@ The site was based on my expepience from the CodeInstitute. The look of the site
  <br>In this project, Django is used to create the backend, handle user authentication, manage the database, 
  <br>and serve the dynamic content for the "E-Shop" E-Commerce website.
 
+ ## Database
+
+- [PostgreSQL](https://www.postgresql.org/): the database used to store All of the data.
+<br>PostgreSQL is a powerful, open-source, object-relational database system that provides high performance, reliability, and extensibility. 
+<br>It supports advanced data types, full-text search, and offers a vast array of features that make it suitable for various types of applications, 
+<br>including web applications, data warehousing, and analytics. In this project, PostgreSQL is used as the production database to store all the data, 
+<br>such as user information, products, orders, and other related information, ensuring data integrity and efficient data management for the E-Commerce website. 
+<br>SQLite is used for the development environment, allowing for easy setup and testing during the development process.
+
+### Cloud Hosting
+
+- [Amazon Web Services](https://signin.aws.amazon.com/): AWS is a comprehensive cloud computing platform that offers a wide range of services, including computing power, storage, and databases. 
+<br>AWS provides reliable, scalable, and cost-effective solutions for hosting web applications, making it a popular choice among developers and businesses. 
+<br>In this project, AWS is utilized to host the static CSS files and media images for the E-Commerce website. By hosting these assets on a cloud platform like AWS, 
+<br>the website benefits from increased performance, reduced latency, and enhanced scalability, ensuring a smooth and responsive user experience.
+
 ## Tools used
 
 - [Google Fonts:](https://fonts.google.com/) Was used to to incorporate font styles.  
@@ -327,7 +343,7 @@ Press Enter.
 
 Your local clone will be created.
 
-For more information follow this [link](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop).
+For more information follow this [GitHub link](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop).
 
 <br/>
 
@@ -404,7 +420,8 @@ The available functionality and user experience is reflected in the table below.
 
 The structure and the code of the project was based on my knowledge, with support Google search, Youtube, Slack, Stack Overflow and more:
   * Hello Django - I created CRUD functionalities based on previous experience of my projects.
-  * From I think  therefore I blog -  I borrowed confirmation messages code and also followed the site deployment steps outlined here. 
+  * From I think  therefore my previous projects and knowledge -  I borrowed confirmation messages code and also followed the site deployment steps outlined here.
+  
 
 Date picker field and minimum date validator learned from [here](https://gist.github.com/stasyao/99376eb0cf0ad3599f9737c421b5210e#part_4).
 
