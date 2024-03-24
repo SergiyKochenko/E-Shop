@@ -132,6 +132,118 @@ The site was based on my expepience from the CodeInstitute. The look of the site
 
 <hr>
 
+---
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Python
+- Django
+- SQLite (development) / PostgreSQL (production)
+- AWS for media and static
+- Render for deployment
+
+### Languages
+
+- Python
+- JavaScript
+- HTML5
+- CSS3
+
+---
+
+## **Installed Packages and comands was in use:**
+
+===================**E-Shop**====================
+- pip install virtualenv
+- virtualenv venv
+- venv\Scripts\activate
+- venv\Scripts\deactivate
+- pip install setuptools
+- pip install wheel
+- pip install django
+- django-admin startproject ecommerceshop
+- python manage.py runserver
+- django-admin startapp store
+- pip install Pillow
+- python manage.py makemigrations
+- python manage.py migrate
+- python manage.py createsuperuser
+- django-admin startapp cart
+- pip install django-mathfilters
+- django-admin startapp account
+- pip install django-crispy-forms==1.14.0
+- pip install django-utils-six
+- pip install django-environ
+- django-admin startapp payment
+- pip install -U boto3
+- pip install -U django-storages
+- python manage.py collectstatic
+- pip install psycopg2
+- pip install gunicorn
+- pip install psycopg2-binary
+- pip install pyyaml==5.3.1 awsebcli   # install globally
+- pip install pyyaml==5.3.1 awsebcli --user   # install globally
+- eb
+- pip freeze > requirements.txt
+- aws configure
+- git pull origin main
+- git add .
+- git commit -m "Resolved merge conflicts"
+- git push origin main
+- aws --version
+- aws configure
+
+
+## **shell:**
+
+- python manage.py shell
+- - from django.contrib.sessions.models import Session
+- - session_k = Session.objects.get(pk='39kzg4q0brhsmgksp9qiqeriu0xe05hz')
+- - session_k.get_decoded()
+- - exit()
+
+---
+
+### **Installed Packages:**
+
+**Package**          &         **Version**
+------------------------- --------
+- asgiref             3.8.1
+- boto3               1.34.69
+- botocore            1.34.69
+- Django              5.0.3
+- django-crispy-forms 1.14.0
+- django-environ      0.11.2
+- django-mathfilters  1.0.0
+- django-storages     1.14.2
+- django-utils-six    2.0
+- gunicorn            21.2.0
+- jmespath            1.0.1
+- packaging           24.0
+- pillow              10.2.0
+- pip                 24.0
+- psycopg2-binary     2.9.9
+- python-dateutil     2.9.0.post0
+- s3transfer          0.10.1
+- setuptools          69.1.1
+- six                 1.16.0
+- sqlparse            0.4.4
+- tzdata              2024.1
+- urllib3             2.2.1
+- wheel               0.42.0
+
+## Frameworks
+
+- [Django](https://www.djangoproject.com/): is a high-level Python web framework that enables rapid development of secure and maintainable websites.
+<br>It follows the Model-View-Template (MVT) architectural pattern and promotes the DRY (Don't Repeat Yourself) principle,
+ <br> which encourages the reuse of code and separation of concerns. Django comes with a built-in admin interface, 
+ <br>a powerful ORM (Object-Relational Mapper), and support for various database systems, making it a popular choice for web developers. 
+ <br>In this project, Django is used to create the backend, handle user authentication, manage the database, 
+ <br>and serve the dynamic content for the "E-Shop" E-Commerce website.
+
 ## Tools used
 
 - [Google Fonts:](https://fonts.google.com/) Was used to to incorporate font styles.  
