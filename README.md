@@ -64,7 +64,44 @@ The primary goals of the E-Shop e-commerce webstore project are:
    
 7. **Scalability and Extensibility:** Build a solid foundation that allows for future expansion and refinement, making it possible to add new features, products, and functionalities as the platform grows.
 
+<hr>
 
+## UX (User Experience)
+
+### User stories
+
+#### First time visitor goals
+
+As a first time visitor, I want:
+* to easily understand the main purpose of the site.
+* to be able to easily navigate throughout the site.
+* to be able to register a user account to access all content without restrictions.
+* to be able to log out of my user account.
+       
+        
+#### Returning and frequent user goals
+
+As a returning user, I want:
+* to sign in to my user account.
+* to make a service checkout.
+* to view my purchase details. 
+* to edit my purchase details or delete them.
+* to create an account, edit and delete them.
+* to sign out of my account to keep my account safe.
+* to be able to reserve an items in the busket for a later come back, view items details and make changes in shopping cart and delete my items from it.
+
+
+#### Site Administrator goals
+As a Site Administrator I would like to be able to create, view, edit and delete products and create, edite, delete categories.
+
+### Agile tools
+
+The GitHub Projects section was used as a [Kanban board](https://...............) for the development of this project, which made it possible to break down the project execution into subtasks and make it easier to complete and track project progress.
+
+
+## Design Structure
+
+The site was based on my expepience from the CodeInstitute. The look of the site, color scheme, font, logo and image for the home page were made by myself from the template.
 
 <hr>
 
