@@ -1,20 +1,13 @@
 ---
-name: 'User Story: '
+name: User Story
 about: 'Describe this issue template''s purpose here:'
 title: ''
-labels: ''
-assignees: ''
+labels: documentation, Must Have
+assignees: SergiyKochenko
 
 ---
 
-title: ''
-labels: 'enhancement'
-assignees: ''
-
----
-
-**User Story**
-As a [type of user], I want [some goal] so that [some reason].
+As a **type of user**, I want **some goal** so that **some reason**.
 
 **Acceptance Criteria**
 
