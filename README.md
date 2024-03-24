@@ -96,12 +96,39 @@ As a Site Administrator I would like to be able to create, view, edit and delete
 
 ### Agile tools
 
-The GitHub Projects section was used as a [Kanban board](https://...............) for the development of this project, which made it possible to break down the project execution into subtasks and make it easier to complete and track project progress.
+The GitHub Projects section was used as a [Kanban board](https://github.com/users/SergiyKochenko/projects/15) for the development of this project, which made it possible to break down the project execution into subtasks and make it easier to complete and track project progress.
 
 
 ## Design Structure
 
 The site was based on my expepience from the CodeInstitute. The look of the site, color scheme, font, logo and image for the home page were made by myself from the template.
+
+<hr>
+
+## Environment and Settings
+- Environment Variables: Utilizes django-environ to manage environment variables, ensuring sensitive information like database credentials and secret keys aren't hard-coded in the source code.
+- Base Directory Setup: Establishes a base directory (BASE_DIR) for the project, which is used to construct paths to various resources and configurations.
+- Security Settings: Includes settings for keeping the secret key secure and configuring CSRF trusted origins.
+## Applications and Middleware
+- Installed Applications: Lists Django's default apps and additional apps specific to the e-commerce functionality (store, cart, account, payment) as well as utility apps like mathfilters and crispy_forms for form styling.
+- Middleware Configuration: Specifies the middleware components that are activated in the Django project, which includes security, session, authentication, and message middleware among others.
+## URLs and Templates
+- Root URL Configuration: Points to ecommerceshop.urls as the module that handles the project's URL configurations.
+- Templates Configuration: Defines the settings for template handling, including the directories where templates are stored and the context processors that add additional context to templates globally.
+## Database Configuration
+- Database Settings: Initially, it shows a default configuration using SQLite, then it's overridden by PostgreSQL settings from environment variables, demonstrating the project's readiness for production deployment with a scalable database.
+## Authentication and Authorization
+- Password Validators: Lists validators for user passwords to enforce security practices, such as minimum length and common password checks.
+## Internationalization
+- Language and Timezone: Sets the default language to English (US) and timezone to UTC, with options enabled for internationalization and timezone support.
+## Static and Media Files
+- Static and Media Settings: Configures URLs and directories for serving static files and user-uploaded media, including integration with AWS S3 for storage.
+## Email Configuration
+- Email Backend: Sets up Django to use SMTP for email sending, with settings for the host, port, and authentication details pulled from environment variables.
+## Cloud Storage
+- AWS S3 Integration: Provides settings for using AWS S3 for file storage, including credentials, bucket name, and domain configuration.
+## Administrative Customizations
+- Admin Styling: Adjusts the path for admin static files to ensure the admin interface is styled correctly.
 
 <hr>
 
@@ -255,6 +282,45 @@ The available functionality and user experience is reflected in the table below.
  - Each of the features were tested multiple times to ensure that numerous new products could be submitted, and that each item had the ability to be updated, edited and delete by the user that submitted it.
  - If a item is submitted by another user, the particular ID item list with update/delete buttons do not appear on the page. This page is available only to authorized users.
 <br/>
+
+
+<hr>
+
+# Credits:
+
+### Code
+
+The structure and the code of the project was based on my knowledge, with support Google search, Youtube, Slack, Stack Overflow and more:
+  * Hello Django - I created CRUD functionalities based on previous experience of my projects.
+  * From I think  therefore I blog -  I borrowed confirmation messages code and also followed the site deployment steps outlined here. 
+
+Date picker field and minimum date validator learned from [here](https://gist.github.com/stasyao/99376eb0cf0ad3599f9737c421b5210e#part_4).
+
+[Official Django Documentation](https://docs.djangoproject.com/en/4.1/ref/) was researched for code expressions  and code functionalities.
+Django [choices fields](https://docs.djangoproject.com/en/4.1/ref/models/fields/).
+
+Stack Overflow was used intensively for research into code functionalities and problem solving. 
+
+
+### Content
+
+The site home page is taken from internet searches template. I slightly changed the look of the home page and tried to keep the rest of the pages in the same style.
+
+
+### Media
+
+Images were all open source and free to use from my owen collections.
+
+### Acknowledgment
+
+- Atlantic Technological University for supporting all our group and for  individual support in all circumstances.
+- All the tutorial videos (especially the Dr. Shane Wilso's blogs) which helped me to understand how it all comes together.
+- The tutor support team at Atlantic Technological University for their support.
+- To my friends who participated in testing my application.
+- Dr. Shane Wilso, for helping me.
+- Class mates for helping me.
+
+
 
 
 
