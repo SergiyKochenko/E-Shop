@@ -93,3 +93,65 @@ The primary goals of the E-Shop e-commerce webstore project are:
 - [Free black vercel](https://black.vercel.app/): was used to format python code for the website.
 - [JSHint](https://jshint.com/): was used to validate Java Script code for the website.
 <br>
+
+
+##  Deployment
+
+The project was developed using Visual Studio, the project code is stored on GitHub, and then deployed to [Render](https://render.com/).
+To deploy, follow these steps:
+
+
+1. Sign Up/Login: First, sign up for an account on Render or log in if you already have one.
+
+2. Connect to GitHub/GitLab: Render supports automatic deployments from GitHub and GitLab. You'll need to connect your Render account to your GitHub or GitLab account. This allows Render to access your repository.
+
+3. Create a New Web Service: Once logged in, go to your dashboard and click on the "New +" button, then select "Web Service". This starts the process of creating a new web service for your website.
+
+4. Select Your Repository: You will be prompted to select the repository where your website code is stored. Choose the repository you wish to deploy.
+
+5. Configure Your Web Service:
+
+- Branch: Select the branch you want to deploy.
+- Build Command: This is the command Render will run to build your website. It might be something like npm run build for Node.js projects.
+- Start Command: This is the command that starts your website, such as npm start for Node.js.
+- Environment: Choose the environment (such as Node, Python, Ruby) that matches your project.
+- Root Directory: If your project is not in the root of your repository, specify the directory.
+
+6. Environment Variables: If your project needs environment variables (like API keys), you can add them in the Environment tab.
+
+7. Deploy: After configuring your web service, click the "Create Web Service" button. Render will then clone your repository, run the build command, and deploy your website.
+
+8. Custom Domain (Optional): After your web service is up and running, you can add a custom domain through the "Settings" tab of your web service. Render provides automatic HTTPS for custom domains.
+
+9. Automatic Deployments: By default, Render will automatically deploy your website on each push to the selected branch of your connected repository. You can adjust these settings in the "Settings" tab.
+
+10. After successful deployment message in the page top left corner click the button labeled 'Open app' and you can access live app.
+
+
+### Forking the GitHub Repository
+
+To use this code and make changes without affecting the original code, it is possible to 'fork' the code on the GitHub repository through the following steps:
+
+1. Create  or log into your GitHub account.
+2. Go to the GitHub [repository](https://github.com/SergiyKochenko/E-Shop).
+3. Click the 'Fork' button in the upper right-hand corner of the page.
+A copy of the repository will be available in your own repository.
+
+
+### Making a Local Clone
+1. Log in to GitHub and locate the GitHub Repository
+2. Under the repository name choose button "Code",  click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open your development editor of choice and open a terminal window in a directory of your choice
+5. Type *git clone*, and then paste the URL you copied in Step 3.
+
+``> git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY``
+
+Press Enter. 
+
+Your local clone will be created.
+
+For more information follow this [link](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop).
+
+
+
