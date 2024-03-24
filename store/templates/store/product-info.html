@@ -5,6 +5,16 @@
 
 {% block content %}
 
+<style>
+
+    body{
+
+        background-color: blue;
+
+    }
+
+</style>
+
 <div class="container">
 
     <main class="pt-5">
@@ -19,9 +29,9 @@
 
             <div class="col-md-7 col-lg-7 ps-md-3 ps-lg-5">
 
-                <h1 class="mb-0 h4"> {{ product.title }}  </h1>
+                <h1 class="mb-0 h4 text-white"> {{ product.title }}  </h1>
 
-                <strong> {{ product.brand }} </strong>
+                <strong class="text-white"> {{ product.brand }} </strong>
 
 
                 <hr>
@@ -29,7 +39,7 @@
                 <br>
 
 
-                <p> {{ product.description }} </p>
+                <p class="text-white"> {{ product.description }} </p>
 
                 <div class="border">
 
@@ -37,9 +47,9 @@
 
                         <div class="row p-3">
 
-                            <div class="col-6"> Price </div>
+                            <div class="col-6 text-white"> Price </div>
 
-                            <div class="col-6 text-end"><span class="h4 fw-bold">$ {{ product.price }} </span></div>
+                            <div class="col-6 text-end"><span class="h4 fw-bold text-white">$ {{ product.price }} </span></div>
 
                         </div>
 
@@ -52,7 +62,7 @@
                             <div class="col-6">
               
                                
-                                <label for="select">Qty</label>
+                                <label class="text-white" for="select">Qty</label>
                                 
                                 &nbsp; 
                                

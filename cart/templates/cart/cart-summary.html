@@ -7,12 +7,22 @@
 
 {% block content %}
 
+<style>
+
+  body{
+
+      background-color: blue;
+
+  }
+
+</style>
+
 
 <main class="pt-5">
     
     <div class="container">
       
-      <h1 class="h5"> Shopping cart </h1>
+      <h1 class="h5 text-white"> Shopping cart </h1>
 
 	    <hr>
 
@@ -33,7 +43,7 @@
         
         <div class="col-md-9 col-lg-10 ps-md-3 ps-lg-10">
           
-          <a href="{{product.get_absolute_url}}" class="text-info text-decoration-none"> 
+          <a href="{{product.get_absolute_url}}" class="text-white text-decoration-none"> 
           
             <h1 class="h5 pt-2"> {{product.title}} </h1>
           
@@ -45,9 +55,9 @@
               
                 <div class="row p-3">
               
-                <div class="col-6"> Product </div>
+                <div class="col-6 text-white"> Product </div>
               
-                <div class="col-6 text-end"><span class="h6 fw-bold">$ {{product.price|mul:item.qty}} </span></div>
+                <div class="col-6 text-end"><span class="text-white h6 fw-bold">$ {{product.price|mul:item.qty}} </span></div>
             
               </div>
             
@@ -59,7 +69,7 @@
                 
                 <div class="col-12">
                   
-                  <label for="select">Qty</label>
+                  <label class="text-white " for="select">Qty</label>
 
                   &nbsp; 
                   
@@ -116,7 +126,7 @@
 
       <div class="col-12 text-end">
  
-        <div class="h6 fw-bold"> Sub total: $ <div id="total" class="d-inline-flex"> {{cart.get_total}} </div></div>
+        <div class="h6 fw-bold text-white"> Sub total: $ <div id="total" class="d-inline-flex"> {{cart.get_total}} </div></div>
  
       <br>
 
