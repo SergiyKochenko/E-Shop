@@ -1,17 +1,17 @@
 # DevOps Coursework assignment 1 - E-Shop eCommerce Webstore
 
-This repository contains the source code for the E-Shop eCommerce webstore, a full stack web application developed as a portfolio project for The ATU - Donegal. The website can be viewed at <https://*************/>.
+This repository contains the source code for the E-Shop eCommerce webstore, a full stack web application developed as a portfolio project for The ATU - Donegal. The website can be viewed at (https://...............).
 
 # Overview
 
-Welcome to [E-Shop(https://*******************/)
+Welcome to [E-Shop](https://..................)
 This Website is an e-Commerce Webstore that was designed and developed as an Portfolio Project for The ATU - Donegal.
 
 E-Shop is a demo e-commerce platform showcasing a wide range of affordable, full-stock cloth products and to a diverse and growing target audience. The project demonstrates the developer's proficiency in creating a comprehensive e-commerce solution, with an appealing design, intuitive navigation, and responsive layout.
 
 Please note that this project is for assessment purposes only and does not accept real credit or debit card payments. Any purchases or bookings made on the website will not be fulfilled.
 
-The project is for assessment purposes only and will not accept any genuine credit or debit card payments and any purchases or booking made will not be fullfilled. The [E-Shop](https://**************/) is a full stack, E-commerce, web application offering affordable, full ctock products and solutions to a growing and diverse target audience.
+The project is for assessment purposes only and will not accept any genuine credit or debit card payments and any purchases or booking made will not be fullfilled. The [E-Shop](https://....................) is a full stack, E-commerce, web application offering affordable, full ctock products and solutions to a growing and diverse target audience.
 
 - User Interface and Design: The website features a visually appealing and modern design, making it easy for users to browse and navigate the site. The layout is responsive, ensuring that the website looks great on various devices, including desktops, laptops, tablets, and smartphones.
 
