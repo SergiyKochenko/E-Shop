@@ -153,5 +153,71 @@ Your local clone will be created.
 
 For more information follow this [link](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop).
 
+<br/>
+
+## Manual Testing
+
+#### Device Testing
+
+The Project was tested using a multi-device emulator with different display sizes in the Google Chrome Developer Dashboard.
+The following devices have been tested:
+
+- Nest HubMax (Desktop)
+- iPad Pro (Tablet)
+- iPad Air (Tablet)
+- iPad Mini (Tablet)
+- Galaxy Tab S4 (Tablet)
+- Nexus 7 (Mobile)
+- Nokia N9 (Mobile)
+- iPhone 12 Pro Max (Mobile)
+- iPhone 5/SE (Mobile)
+- iPhone 4 (Mobile)
+
+#### Browsers Tested
+
+Testing has been carried out on the  following browsers: 
+  - Google Chrome
+  - Firefox
+  - Microsoft Edge
+  - Safari iOS
+
+The site was constantly tested during the process of creating the site in the Visual Studio Code Environment and the deployed site on Render was also tested in terms of user experience.
+The available functionality and user experience is reflected in the table below.
+
+| Goals/actions  | As a guest | As a logged user  | Result | Comment |
+|--|:--:|:--:|:--:|--|
+| User can use menu and navigating through pages | &check; | &check; | Pass | Click on menu item redirects to appropriate page |
+| User can see the home page | &check; | &check; | Pass | |
+| User can see the Pricing page | &check; |&check;  |  Pass| |
+| User can see the Sign Up page | &check; |&check;  |  Pass| |
+| User can see the Login page  | &check; |&check;  |  Pass| |
+| User can see the Logout page  | &check; |&check;  |  Pass| |
+| User can click the Create an account button  | &check; |&check;  |  Pass| Redirects to the page with a message that the user must register or log in for guest or shows up form for authorized user |
+| User can see the Register page | &cross; | &check;  | Pass |A page is displayed with a message that the user must register or log in  |
+| User can fill fields in the form the Register page | &cross; | &check;  | Pass |This page and form are available only to authorized users |
+| User can see the Dashboard page   | &cross; | &check;  | Pass | This page is available only to an authorized users|
+| User can see the Prifile manage page  | &cross;  | &check;  | Pass | This page is available only to authorized users|
+| User can Update account form on the Profile management page  | &cross;  | &check;  | Pass |This page is available only to authorized users ||
+| User can Delete an accuont form on the Profile management page  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
+| User can see the Manage shipping page click on the Manage shipping button from the dashboard  |  &check; | &check;  |Pass  | This page is available only to authorized users |
+| User can Update shipping address from on the Manage shipping page  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
+| User can select category items from nav-bar on the dropdown menu  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
+| User can add items to the busket  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
+| User can update items in the busket  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
+| User can delete items from the busket  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
+| User can procced to chechout  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
+| User can pay by PayPal, Debit or Credit Card  |  &cross; | &check;  |Pass  | This page is available only to authorized users |
+| Admin can create service, edit and delete from admin site  |  &cross; | &check;  |Pass  | This page is available only for authorized admin |
+| Admin can create user, update and delete from admin panel  |  &cross; | &check;  |Pass  | This page is available only for authorized admin |
+| Admin can approve or delete user from admin panel  |  &cross; | &check;  |Pass  | This page is available only for authorized admin |
+| |
+
+### Testing CRUD functionality:
+ - Each of the features were tested multiple times to ensure that numerous new items could be added, and that each items had the ability to be updated, edited and delete by the user that submitted it.
+ - If an item is submitted by user, the update/delete buttons appear on the page of Shopping cart.
+ - Each of the features were tested multiple times to ensure that numerous new products could be submitted, and that each item had the ability to be updated, edited and delete by the user that submitted it.
+ - If a item is submitted by another user, the particular ID item list with update/delete buttons do not appear on the page. This page is available only to authorized users.
+<br/>
+
 
 
