@@ -11,7 +11,7 @@ class Category(models.Model):
 
     class Meta:
 
-        verbose_name_plural = 'categories'
+        verbose_name_plural = "categories"
 
     def __str__(self):
 
@@ -19,18 +19,20 @@ class Category(models.Model):
 
     def get_absolute_url(self):
 
-        return reverse('list-category', args=[self.slug])
-    
+        return reverse("list-category", args=[self.slug])
+
 
 class Product(models.Model):
 
-    #FK 
+    # FK
 
-    category = models.ForeignKey(Category, related_name='product', on_delete=models.CASCADE, null=True)
+    category = models.ForeignKey(
+        Category, related_name="product", on_delete=models.CASCADE, null=True
+    )
 
     title = models.CharField(max_length=250)
 
-    brand = models.CharField(max_length=250, default='un-branded')
+    brand = models.CharField(max_length=250, default="un-branded")
 
     description = models.TextField(blank=True)
 
@@ -38,18 +40,16 @@ class Product(models.Model):
 
     price = models.DecimalField(max_digits=4, decimal_places=2)
 
-    image = models.ImageField(upload_to='images/')
-
+    image = models.ImageField(upload_to="images/")
 
     class Meta:
 
-        verbose_name_plural = 'products'
+        verbose_name_plural = "products"
 
     def __str__(self):
 
         return self.title
 
-
     def get_absolute_url(self):
 
-        return reverse('product-info', args=[self.slug])
+        return reverse("product-info", args=[self.slug])

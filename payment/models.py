@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 from store.models import Product
 
 
-
 class ShippingAddress(models.Model):
 
     full_name = models.CharField(max_length=300)
@@ -30,13 +29,11 @@ class ShippingAddress(models.Model):
 
     class Meta:
 
-        verbose_name_plural = 'Shipping Address'
-
+        verbose_name_plural = "Shipping Address"
 
     def __str__(self):
 
-        return 'Shipping Address - ' + str(self.id)
-
+        return "Shipping Address - " + str(self.id)
 
 
 class Order(models.Model):
@@ -55,11 +52,9 @@ class Order(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
-
     def __str__(self):
 
-        return 'Order - #' + str(self.id)
-    
+        return "Order - #" + str(self.id)
 
 
 class OrderItem(models.Model):
@@ -72,13 +67,12 @@ class OrderItem(models.Model):
 
     quantity = models.PositiveBigIntegerField(default=1)
 
-    price = models.DecimalField(max_digits=8, decimal_places=2)    
+    price = models.DecimalField(max_digits=8, decimal_places=2)
 
     # FK
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
-
     def __str__(self):
 
-        return 'Order Item - #' + str(self.id)
+        return "Order Item - #" + str(self.id)
