@@ -284,6 +284,7 @@ The site was based on my expepience from the CodeInstitute. The look of the site
 - [Free cleancss CSS3](https://www.cleancss.com/css-beautify/): was used to format CSS3 code for the website.
 - [Free black vercel](https://black.vercel.app/): was used to format python code for the website.
 - [JSHint](https://jshint.com/): was used to validate Java Script code for the website.
+- [js-beautify](https://beautifier.io/): used for Online JavaScript beautifier formatter.
 <br>
 
 
