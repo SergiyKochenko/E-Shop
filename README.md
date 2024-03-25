@@ -285,6 +285,7 @@ The site was based on my expepience from the CodeInstitute. The look of the site
 - [Free black vercel](https://black.vercel.app/): was used to format python code for the website.
 - [JSHint](https://jshint.com/): was used to validate Java Script code for the website.
 - [js-beautify](https://beautifier.io/): used for Online JavaScript beautifier formatter.
+- [Render](https://render.com/): Deployed on Render platform Free WEB SERVICE. Free instance will spin down with inactivity, which can delay requests by 50 seconds or more.
 <br>
 
 
