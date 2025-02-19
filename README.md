@@ -1,17 +1,17 @@
 # DevOps Coursework assignment 1 - E-Shop eCommerce Webstore
 
-This repository contains the source code for the E-Shop eCommerce webstore, a full stack web application developed as a portfolio project for The ATU - Donegal. The website can be viewed at (https://e-commerce-web-shop.onrender.com).
+This repository contains the source code for the E-Shop eCommerce website, a full stack web application developed as a portfolio project for The ATU - Donegal. The website can be viewed at (https://e-commerce-web-shop.onrender.com).
 
 # Overview
 
 Welcome to [E-Shop](https://e-commerce-web-shop.onrender.com)
-This Website is an e-Commerce Webstore that was designed and developed as an Portfolio Project for The DevOps Coursework assignment 1 at ATU - Donegal.
+This Website is an e-commerce Webstore designed and developed as a Portfolio Project for The DevOps Coursework.
 
-E-Shop is a demo e-commerce platform showcasing a wide range of affordable, full-stock cloth products and to a diverse and growing target audience. The project demonstrates the developer's proficiency in creating a comprehensive e-commerce solution, with an appealing design, intuitive navigation, and responsive layout.
+E-Shop is a demo e-commerce platform showcasing a wide range of affordable, full-stock cloth products to a diverse and growing target audience. The project demonstrates the developer's proficiency in creating a comprehensive e-commerce solution, with an appealing design, intuitive navigation, and responsive layout.
 
-Please note that this project is for assessment purposes only and does not accept real credit or debit card payments. Any purchases or bookings made on the website will not be fulfilled.
+Just so you know, this project is for assessment purposes only and does not accept real credit or debit card payments. Any purchases or bookings made on the website will not be fulfilled.
 
-The project is for assessment purposes only and will not accept any genuine credit or debit card payments and any purchases or booking made will not be fullfilled. The [E-Shop](https://e-commerce-web-shop.onrender.com) is a full stack, E-commerce, web application offering affordable, full ctock products and solutions to a growing and diverse target audience.
+The project is for assessment purposes only and will not accept any genuine credit or debit card payments and any purchases or bookings made will not be fulfilled. The [E-Shop](https://e-commerce-web-shop.onrender.com) is a full-stack, E-commerce, web application offering affordable, full-stack products and solutions to a growing and diverse target audience.
 
 - User Interface and Design: The website features a visually appealing and modern design, making it easy for users to browse and navigate the site. The layout is responsive, ensuring that the website looks great on various devices, including desktops, laptops, tablets, and smartphones.
 
@@ -23,20 +23,20 @@ The project is for assessment purposes only and will not accept any genuine cred
   
 - Performance and Optimization: The E-Shop website is built with performance in mind, ensuring fast load times and an optimized user experience. This aspect showcases the developer's knowledge of best practices in web development and their ability to create a high-performing e-commerce platform.
 
-Overall, the E-Shop is a well-rounded e-commerce web application that demonstrates the developer's expertise in full stack web development, specifically in the context of e-commerce. The website is an excellent portfolio project that highlights their proficiency in various aspects of web development, from front-end design to back-end functionality, and provides a strong foundation for potential future projects.
+Overall, the E-Shop is a well-rounded e-commerce web application that demonstrates the developer's expertise in full-stack web development, specifically in the context of e-commerce. The website is an excellent portfolio project that highlights their proficiency in various aspects of web development, from front-end design to back-end functionality, and provides a strong foundation for potential future projects.
 
 Please use the link below to view the deployed project. If you wish to make a mock purchase, you can use the following details:
 
-Test credit cart detailes:
+Test credit card details:
 
 - Card Number: 4032032685528157
 - Exp Date: Any (future) date using the format MM/YY
-- CVN = any 3 digit number
+- CVN = any 3-digit number
 - ZIP code = any 5 numerals
 - Mobile: 203-550-1340
 
 
-Test PayPal detailes:
+Test PayPal details:
 
 Email: kingmon@gmail.com
 
@@ -48,9 +48,9 @@ Any payments made using an actual payment card will fail and the card will not b
 
 ## Project goals
 
-The primary goals of the E-Shop e-commerce webstore project are:
+The primary goals of the E-Shop e-commerce website project are:
 
-1. **Portfolio Showcase:** Demonstrate the developer's skills and capabilities in full-stack web development, specifically in the context of e-commerce, as part of The DevOps Coursework assignment 1 at ATU - Donegal.
+1. **Portfolio Showcase:** Demonstrate the developer's skills and capabilities in full-stack web development, specifically in the context of e-commerce, as part of The DevOps Coursework Assignment 1 at ATU - Donegal.
    
 2. **User Experience:** Create a visually appealing, responsive, and user-friendly web application that offers an intuitive browsing and shopping experience for a diverse and growing target audience.
 
@@ -70,9 +70,9 @@ The primary goals of the E-Shop e-commerce webstore project are:
 
 ### User stories
 
-#### First time visitor goals
+#### First-time visitor goals
 
-As a first time visitor, I want:
+As a first-time visitor, I want:
 * to easily understand the main purpose of the site.
 * to be able to easily navigate throughout the site.
 * to be able to register a user account to access all content without restrictions.
@@ -88,11 +88,11 @@ As a returning user, I want:
 * to edit my purchase details or delete them.
 * to create an account, edit and delete them.
 * to sign out of my account to keep my account safe.
-* to be able to reserve an items in the busket for a later come back, view items details and make changes in shopping cart and delete my items from it.
+* to be able to reserve an item in the bucket for a later come back, view item details make changes in the shopping cart and delete my items from it.
 
 
 #### Site Administrator goals
-As a Site Administrator I would like to be able to create, view, edit and delete products and create, edite, delete categories.
+As a Site Administrator, I would like to be able to create, view, edit and delete products and create, edit, and delete categories.
 
 ### Agile tools
 
@@ -101,7 +101,7 @@ The GitHub Projects section was used as a [Kanban board](https://github.com/user
 
 ## Design Structure
 
-The site was based on my expepience from the CodeInstitute. The look of the site, color scheme, font, logo and image for the home page were made by myself from the template.
+The site was based on my experience at the Code Institute. The look of the site, colour scheme, font, logo and image for the home page were made by myself from the template.
 
 <hr>
 
@@ -113,7 +113,7 @@ The site was based on my expepience from the CodeInstitute. The look of the site
 - Installed Applications: Lists Django's default apps and additional apps specific to the e-commerce functionality (store, cart, account, payment) as well as utility apps like mathfilters and crispy_forms for form styling.
 - Middleware Configuration: Specifies the middleware components that are activated in the Django project, which includes security, session, authentication, and message middleware among others.
 ## URLs and Templates
-- Root URL Configuration: Points to ecommerceshop.urls as the module that handles the project's URL configurations.
+- Root URL Configuration: Points to eCommerce shop.urls as the module that handles the project's URL configurations.
 - Templates Configuration: Defines the settings for template handling, including the directories where templates are stored and the context processors that add additional context to templates globally.
 ## Database Configuration
 - Database Settings: Initially, it shows a default configuration using SQLite, then it's overridden by PostgreSQL settings from environment variables, demonstrating the project's readiness for production deployment with a scalable database.
@@ -154,19 +154,19 @@ The site was based on my expepience from the CodeInstitute. The look of the site
 
 ---
 
-## **Installed Packages and comands was in use:**
+## **Installed Packages and commands was in use:**
 
 ===================**E-Shop**====================
 - pip install virtualenv
-- virtualenv venv
+- virtual venv
 - venv\Scripts\activate
 - venv\Scripts\deactivate
-- pip install setuptools
+- pip install setup tools
 - pip install wheel
-- pip install django
+- pip install Django
 - django-admin startproject ecommerceshop
 - python manage.py runserver
-- django-admin startapp store
+- django-admin start app store
 - pip install Pillow
 - python manage.py makemigrations
 - python manage.py migrate
@@ -180,7 +180,7 @@ The site was based on my expepience from the CodeInstitute. The look of the site
 - django-admin startapp payment
 - pip install -U boto3
 - pip install -U django-storages
-- python manage.py collectstatic
+- python manage.py collect static
 - pip install psycopg2
 - pip install gunicorn
 - pip install psycopg2-binary
@@ -444,12 +444,8 @@ Images were all open source and free to use from my owen collections.
 
 ### Acknowledgment
 
-- Atlantic Technological University for supporting all our group and for  individual support in all circumstances.
-- All the tutorial videos (especially the Dr. Shane Wilso's blogs) which helped me to understand how it all comes together.
-- The tutor support team at Atlantic Technological University for their support.
+- All the tutorial videos which helped me to understand how it all comes together.
 - To my friends who participated in testing my application.
-- Dr. Shane Wilso, for helping me.
-- Class mates for helping me.
 - Happy Coding!!!
 
 
