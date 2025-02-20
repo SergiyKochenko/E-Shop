@@ -1,6 +1,6 @@
 # DevOps Coursework assignment 1 - E-Shop eCommerce Webstore
 
-This repository contains the source code for the E-Shop eCommerce website, a full stack web application developed as a portfolio project for The ATU - Donegal. The website can be viewed at (https://e-commerce-web-shop.onrender.com).
+This repository contains the source code for the E-Shop eCommerce website, a full-stack web application developed as a portfolio project. The website can be viewed at (https://e-commerce-web-shop.onrender.com).
 
 # Overview
 
